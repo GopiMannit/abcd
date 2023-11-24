@@ -86,8 +86,8 @@ function Register() {
     }
   }
   return (
-    <div className="cont bg-custom-image">
-      <div className="flex flex-row justify-around items-center h-screen">
+    <div className="min-h-screen bg-custom-image">
+      <div className="flex flex-col justify-around items-center lg:flex-row md:flex-col sm:flex-col sm:item-center md:item-center">
         <img src={wp} className='w-[300px] h-[300px]' alt='img'/>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mt-3 pb-3  h-full w-[350px] items-center bg-[#FDD116] rounded-3xl shadow-5xl border-r-0 border-b-0 border-opacity-30">
@@ -108,7 +108,7 @@ function Register() {
 
                 <input value={user} onChange={e => userchange(e.target.value)} type="text" placeholder="Enter username" className="text-[15px] w-[215px]  text-sm   text-[#28282B] placeholder-[#28282B] bg-transparent focus:outline-none border-b-[1px] border-[#28282B] required"
                   required
-                  pattern=".*\S+.*"
+                  pattern=".\S+."
                 />
               </div>
               <div className="flex flex-row space-x-3">
@@ -134,7 +134,7 @@ function Register() {
 
                 <input value={email} onChange={e => emailchange(e.target.value)} type="text"  placeholder="Enter email" className="w-[215px] text-sm text-[#28282B] placeholder-[#28282B] bg-transparent focus:outline-none border-b-[1px] border-[#28282B]"
                   required
-                  pattern=".*\S+.*"
+                  pattern=".\S+."
                 />
               </div>
               <div className="flex flex-row space-x-3">
